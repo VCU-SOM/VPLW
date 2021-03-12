@@ -205,7 +205,7 @@ style.use("ggplot")
 
 #ax = fig.add_subplot(121)
 
-f, ax = plt.subplots(figsize=(8,10))
+f, ax = plt.subplots(figsize=(10,8))
 
 ax.set_xscale('log')
 ax.set_xlim(.001,1000)
