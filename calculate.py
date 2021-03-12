@@ -21,23 +21,25 @@ def radose_func():
         list2 = []           
     else: 
         for A in dose2:
-                list2.append(round((F*Rt*E*(A/(A+Kd))),2))
+                list2.append(round((ex2_F*ex2_Rt*ex2_E*(A/(A+ex2_Kd))),2))
       
     if len(dose3) == 0: 
         list3 = []
     else: 
         for A in dose3:
-                list3.append(round((F*Rt*E*(A/(A+Kd))),2))           
+                list3.append(round((ex3_F*ex3_Rt*ex3_E*(A/(A+ex3_Kd))),2))         
                 
     if len(dose4) == 0: 
         list4 = []
     else: 
         for A in dose4:
-                list4.append(round((F*Rt*E*(A/(A+Kd))),2))          
+                list4.append(round((ex4_F*ex4_Rt*ex4_E*(A/(A+ex4_Kd))),2))         
                 
     return list, list2, list3, list4
 
-ralist, ralist2, ralist3, ralist4 = radose_func()              
+ralist, ralist2, ralist3, ralist4 = radose_func()
+
+#testing# print(ralist, ralist2)
                 
 def log_dose_func():
     list = []
@@ -50,19 +52,22 @@ def log_dose_func():
     else:
         for A in dose:
                 if type(A) == int or float:
-                    list.append(round(math.log(A,10),1))  
+                    list.append(round(math.log(A,10),1))
+                    
     if len(dose2) == 0: 
         list2 = []              
     else:                
         for A in dose2:
                 if type(A) == int or float:
                     list2.append(round(math.log(A,10),1))
+                    
     if len(dose3) == 0: 
         list3 = []             
     else:                
         for A in dose3:
                 if type(A) == int or float:
                     list3.append(round(math.log(A,10),1)) 
+                    
     if len(dose4) == 0: 
         list4 = []               
     else:                           
@@ -72,6 +77,8 @@ def log_dose_func():
     return list, list2, list3, list4
 
 ldlist, ldlist2, ldlist3, ldlist4 = log_dose_func()
+
+#Testing# print(ldlist, ldlist2)
                    
 
 def effect_ct_func():
@@ -90,24 +97,24 @@ def effect_ct_func():
     if len(dose2) == 0: 
         list2 = []
     else:
-        for A in ralist:
-            list2.append((A - threshold)/(capacity - threshold)*100)
+        for A in ralist2:
+            list2.append((A - ex2_threshold)/(ex2_capacity - ex2_threshold)*100)
             
          
     if len(dose3) == 0: 
         list3 = []
     else:
-        for A in ralist:
+        for A in ralist3:
             list3.append((A - threshold)/(capacity - threshold)*100)
    
     
     if len(dose4) == 0: 
         list4 = []
     else:
-        for A in ralist:
+        for A in ralist4:
             list4.append((A - threshold)/(capacity - threshold)*100)
             
-    return list,list2,list,list4
+    return list,list2,list3,list4
 
 ectlist, ectlist2, ectlist3, ectlist4 = effect_ct_func()
 
@@ -159,7 +166,7 @@ def effect_assay_func():
                 A = 100
             list4.append(round(A,2))
     
-    return list,list2,list,list4
+    return list,list2,list3,list4
 
 ealist, ealist2, ealist3, ealist4 = effect_assay_func()
    
@@ -185,8 +192,6 @@ df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','effect_assay'])
 # Effect(C-T) determines gross effect as %MPE in assay given Threshold T and Ceiling C as Effect=((RA-T)/(C-T))*100
 #
 #
-
-
 
 calculations1 = pd.DataFrame(zippedList, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
 calculations2 = pd.DataFrame(zippedList, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
