@@ -15,29 +15,32 @@ def radose_func():
         list = []
     else: 
         for A in dose:
-                list.append(round((F*Rt*E*(A/(A+Kd))),2))
+                list.append(round((F*Rt*E*(A/(A+Kd))),1))
                 
     if len(dose2) == 0: 
         list2 = []           
     else: 
         for A in dose2:
-                list2.append(round((ex2_F*ex2_Rt*ex2_E*(A/(A+ex2_Kd))),2))
+                list2.append(round((ex2_F*ex2_Rt*ex2_E*(A/(A+ex2_Kd))),1))
       
     if len(dose3) == 0: 
         list3 = []
     else: 
         for A in dose3:
-                list3.append(round((ex3_F*ex3_Rt*ex3_E*(A/(A+ex3_Kd))),2))         
+                list3.append(round((ex3_F*ex3_Rt*ex3_E*(A/(A+ex3_Kd))),1))         
                 
     if len(dose4) == 0: 
         list4 = []
     else: 
         for A in dose4:
-                list4.append(round((ex4_F*ex4_Rt*ex4_E*(A/(A+ex4_Kd))),2))         
+                list4.append(round((ex4_F*ex4_Rt*ex4_E*(A/(A+ex4_Kd))),1))         
                 
     return list, list2, list3, list4
 
 ralist, ralist2, ralist3, ralist4 = radose_func()
+
+#print("RALIST")
+#print(ralist, ralist2, ralist3, ralist4)
 
 #testing# print(ralist, ralist2)
                 
@@ -77,9 +80,9 @@ def log_dose_func():
     return list, list2, list3, list4
 
 ldlist, ldlist2, ldlist3, ldlist4 = log_dose_func()
-
-#Testing# print(ldlist, ldlist2)
                    
+#print("LDLIST")
+#print(ldlist, ldlist2, ldlist3, ldlist4)
 
 def effect_ct_func():
     list = []
@@ -105,18 +108,21 @@ def effect_ct_func():
         list3 = []
     else:
         for A in ralist3:
-            list3.append((A - threshold)/(capacity - threshold)*100)
+            list3.append((A - ex3_threshold)/(ex3_capacity - ex3_threshold)*100)
    
     
     if len(dose4) == 0: 
         list4 = []
     else:
         for A in ralist4:
-            list4.append((A - threshold)/(capacity - threshold)*100)
-            
-    return list,list2,list3,list4
+            list4.append((A - ex4_threshold)/(ex4_capacity - ex4_threshold)*100)      
+    return list, list2, list3, list4
 
 ectlist, ectlist2, ectlist3, ectlist4 = effect_ct_func()
+
+#print("ECT LIST")
+#print(ectlist, ectlist2, ectlist3, ectlist4)
+
 
 def effect_assay_func():
     list = []
@@ -125,55 +131,61 @@ def effect_assay_func():
     list4 = []
     
     if len(dose) == 0: 
-        list = []
+       list = []
     else:
-        for A in ralist:
+        for A in ectlist:
             if A <= 0:
                 A = 0
-            if A >= 100:
-                A = 100
-            list.append(round(A,2))
+            elif A >= 100:
+                 A = 100
+            list.append(round(A,1))
     
             
     if len(dose2) == 0: 
         list2 = []
     else:
-        for A in ralist2:
+        for A in ectlist2:
             if A <= 0:
                 A = 0
-            if A >= 100:
+            elif A >= 100:
                 A = 100
-            list2.append(round(A,2))
+            list2.append(round(A,1))
     
 
     if len(dose3) == 0: 
-        list3 = []
+        eaf_list3 = []
     else:
-        for A in ralist3:
+        for A in ectlist3:
             if A <= 0:
                 A = 0
-            if A >= 100:
+            elif A >= 100:
                 A = 100
             list3.append(round(A,2))
     
     if len(dose4) == 0: 
-        list4 = []
+        eaf_list4 = []
     else:
-        for A in ralist4:
+        for A in ectlist4:
             if A <= 0:
                 A = 0
-            if A >= 100:
+            elif A >= 100:
                 A = 100
-            list4.append(round(A,2))
-    
-    return list,list2,list3,list4
+            list4.append(round(A,1))
+    return list, list2, list3, list4
 
 ealist, ealist2, ealist3, ealist4 = effect_assay_func()
-   
-zippedList = list(zip(dose, ldlist, ectlist))
-zippedList2 = list(zip(dose2, ldlist2, ectlist2))
-zippedList3 = list(zip(dose3, ldlist3, ectlist3))
-zippedList4 = list(zip(dose4, ldlist4, ectlist4))
+
+#print("EA List")
+#print(ealist, ealist2, ealist3, ealist4)
+
+#creating zipped lists
+
+zippedList = list(zip(dose, ldlist, ealist))
+zippedList2 = list(zip(dose2, ldlist2, ealist2))
+zippedList3 = list(zip(dose3, ldlist3, ealist3))
+zippedList4 = list(zip(dose4, ldlist4, ealist4))
+
+# Create the Calculations DataFrames
 
 calculations_zl = list(zip(ralist, ectlist, ealist))
 calculations_zl2 = list(zip(ralist2, ectlist2, ealist2))
@@ -188,15 +200,13 @@ df3 = pd.DataFrame(zippedList3, columns = ['Dose','log(Dose)','effect_assay'])
 df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','effect_assay'])
 
 # Display Calculations
-#
 # Effect(C-T) determines gross effect as %MPE in assay given Threshold T and Ceiling C as Effect=((RA-T)/(C-T))*100
-#
-#
 
-calculations1 = pd.DataFrame(zippedList, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
-calculations2 = pd.DataFrame(zippedList, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
-calculations3 = pd.DataFrame(zippedList, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
-calculations4 = pd.DataFrame(zippedList, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
+#calculations1 = pd.DataFrame(calculations_zl, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
+#calculations2 = pd.DataFrame(calculations_zl2, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
+#calculations3 = pd.DataFrame(calculations_zl3, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
+#calculations4 = pd.DataFrame(calculations_zl4, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
+
 
 from matplotlib import style # import style module
 style.use("ggplot")
@@ -205,7 +215,7 @@ style.use("ggplot")
 
 #ax = fig.add_subplot(121)
 
-f, ax = plt.subplots(figsize=(10,8))
+f, ax = plt.subplots(figsize=(8,5))
 
 ax.set_xscale('log')
 ax.set_xlim(.001,1000)
@@ -242,3 +252,4 @@ display(df3)
 
 print('EXP4')
 display(df4)
+    
