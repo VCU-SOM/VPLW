@@ -4,6 +4,7 @@ import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib import style # import style module
 
 def radose_func():
     list = []
@@ -208,7 +209,6 @@ df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','effect_assay'])
 #calculations4 = pd.DataFrame(calculations_zl4, columns =  ['RA(Dose)','Effect(C-T)', 'Effect(Assay)'])
 
 
-from matplotlib import style # import style module
 style.use("ggplot")
 
 #fig = plt.figure(figsize=(8,5))
@@ -219,6 +219,7 @@ f, ax = plt.subplots(figsize=(8,5))
 
 ax.set_xscale('log')
 ax.set_xlim(.001,1000)
+ax.set_ylim(0,100)
 ax.set_xticks([.001,.01,.1,1,10,100,1000])
 ax.set_xticklabels([.001,.01,.1,1,10,100,1000])
 
