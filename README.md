@@ -4,7 +4,7 @@
 
 ## VCU Virtual Pharmacology Lab Worksheet
 
-RA(Dose) determines degree of Receptor Activation RA for a give dose A as RA=F*Rt*E*(A/(A+Kd))
+RA(Dose) determines degree of Receptor Activation RA for a given dose A as RA=F*Rt*E*(A/(A+Kd))
 
 Effect(C-T) determines gross effect as %MPE in assay given Threshold T and Ceiling C as Effect=((RA-T)/(C-T))*100
 
