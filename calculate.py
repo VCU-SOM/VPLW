@@ -190,16 +190,16 @@ zippedList4 = list(zip(dose4, ldlist4, ralist4, ectlist4, ealist4))
 # Adding new columns Dose, log(Dose), RA, Effect(C-T), Effect(Assay)
 
 df = pd.DataFrame(zippedList, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-dfrounded = df.round(decimals=1)
+dfrounded = df.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
 df2 = pd.DataFrame(zippedList2, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-df2rounded = df2.round(decimals=1)
+df2rounded = df2.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
 df3 = pd.DataFrame(zippedList3, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-df3rounded = df3.round(decimals=1)
+df3rounded = df3.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
 df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-df4rounded = df4.round(decimals=1)
+df4rounded = df4.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
 style.use("ggplot")
 
@@ -245,4 +245,3 @@ display(df3rounded)
 
 print('EXP4')
 display(df4rounded)
-    
