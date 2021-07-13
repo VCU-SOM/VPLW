@@ -6,6 +6,42 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import style # import style module
 
+#RO=A/(A+Kd)
+
+def receptor_occupancy():
+    list = []
+    list2 = []
+    list3 = []
+    list4 = []
+    
+    if len(dose) == 0: 
+        list = []
+    else: 
+        for A in dose:
+                list.append((A/(A+Kd)))
+    
+    if len(dose2) == 0: 
+        list2 = []
+    else: 
+        for A in dose2:
+                list2.append((A/(A+ex2_Kd)))
+    
+    if len(dose3) == 0: 
+        list3 = []
+    else: 
+        for A in dose3:
+                list3.append((A/(A+ex3_Kd)))
+            
+    if len(dose4) == 0: 
+        list4 = []
+    else: 
+        for A in dose4:
+                list4.append((A/(A+ex4_Kd)))
+            
+    return list, list2, list3, list4
+
+rolist, rolist2, rolist3, rolist4 = receptor_occupancy()
+            
 def radose_func():
     list = []
     list2 = []
@@ -181,25 +217,25 @@ ealist, ealist2, ealist3, ealist4 = effect_assay_func()
 
 #creating zipped lists
 
-zippedList = list(zip(dose, ldlist, ralist, ectlist, ealist))
-zippedList2 = list(zip(dose2, ldlist2, ralist2, ectlist2, ealist2))
-zippedList3 = list(zip(dose3, ldlist3, ralist3, ectlist3, ealist3))
-zippedList4 = list(zip(dose4, ldlist4, ralist4, ectlist4, ealist4))
+zippedList = list(zip(dose, ldlist, rolist, ralist, ectlist, ealist))
+zippedList2 = list(zip(dose2, ldlist2, rolist2, ralist2, ectlist2, ealist2))
+zippedList3 = list(zip(dose3, ldlist3, rolist3, ralist3, ectlist3, ealist3))
+zippedList4 = list(zip(dose4, ldlist4, rolist4, ralist4, ectlist4, ealist4))
 
 # Creating the DataFrame
 # Adding new columns Dose, log(Dose), RA, Effect(C-T), Effect(Assay)
 
-df = pd.DataFrame(zippedList, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-dfrounded = df.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df = pd.DataFrame(zippedList, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
+dfrounded = df.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
-df2 = pd.DataFrame(zippedList2, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-df2rounded = df2.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df2 = pd.DataFrame(zippedList2, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
+df2rounded = df2.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
-df3 = pd.DataFrame(zippedList3, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-df3rounded = df3.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df3 = pd.DataFrame(zippedList3, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
+df3rounded = df3.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
-df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','RA', 'Effect(C-T)','Effect(Assay)'])
-df4rounded = df4.round({"Dose":4,"log(Dose)":1,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
+df4rounded = df4.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
 style.use("ggplot")
 
