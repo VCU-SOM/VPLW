@@ -30,7 +30,7 @@ The simulated data in Experiment 1 can then be compared to simulated data under 
 
  ## VCU Virtual Pharmacology Lab Worksheet. II. Drug Interactions
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/VCU-SOM/VPLW/HEAD?filepath=VCU-VPLW-Phase-II.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/VCU-SOM/VPLW/HEAD?filepath=VCU-VPLW-Phase2.ipynb)
 
 This module generates simulated dose-effect curves resulting from the combination of two ligands here called Drug A and Drug B (either two different drugs, or a drug in combination with basal tone for an endogenous neurotransmitter).  You will enter the following variables
 
