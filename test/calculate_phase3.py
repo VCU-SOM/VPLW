@@ -254,17 +254,26 @@ zippedList4 = list(zip(dose4, ldlist4, rolist4, ralist4, ectlist4, ealist4))
 # Creating the DataFrame
 # Adding new columns Dose, log(Dose), RA, Effect(C-T), Effect(Assay)
 
+
 df = pd.DataFrame(zippedList, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
 dfrounded = df.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
 
+#removing columns for students
+df_remove = dfrounded.filter(['Dose','log(Dose)','Effect(Assay)'])
+
+#new_dataframe = old_dataframe.filter(['Columns','you','want'], axis=1)
+
 df2 = pd.DataFrame(zippedList2, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
 df2rounded = df2.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df2_remove = df2rounded.filter(['Dose','log(Dose)','Effect(Assay)'])
 
 df3 = pd.DataFrame(zippedList3, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
 df3rounded = df3.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df3_remove = df3rounded.filter(['Dose','log(Dose)','Effect(Assay)'])
 
 df4 = pd.DataFrame(zippedList4, columns = ['Dose','log(Dose)','Receptor Occupancy','RA', 'Effect(C-T)','Effect(Assay)'])
 df4rounded = df4.round({"Dose":4,"log(Dose)":1,"Receptor Occupancy":2,"RA":1, "Effect(C-T)":1, "Effect(Assay)":1})
+df4_remove = df4rounded.filter(['Dose','log(Dose)','Effect(Assay)'])
 
 style.use("ggplot")
 
@@ -300,13 +309,13 @@ plt.legend(loc = 2)
 plt.show()
 
 print('EXP1')
-display(dfrounded)
+display(df_remove)
 
 print('EXP2')
-display(df2rounded)
+display(df2_remove)
 
 print('EXP3')
-display(df3rounded)
+display(df3_remove)
 
 print('EXP4')
-display(df4rounded)
+display(df4_remove)
