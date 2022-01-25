@@ -64,9 +64,9 @@ ex4_Rt = 100
 
 ## Drug Parameters
 
-ex4_Ea = 0
+ex4_Ea = 1
 ex4_Ka = 1
-ex4_Eb = 1
+ex4_Eb = 0
 ex4_Kb = 1
 
 ## Assay Parameters
