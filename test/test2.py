@@ -26,7 +26,7 @@ ex2_Rt = 80
 
 ## Drug Parameters
 
-ex2_Ea = 0.33
+ex2_Ea = 0
 ex2_Ka = 1
 ex2_Eb = 1
 ex2_Kb = 1
@@ -45,7 +45,7 @@ ex3_Rt = 100
 
 ## Drug Parameters
 
-ex3_Ea = 0.66
+ex3_Ea = 0
 ex3_Ka = 1
 ex3_Eb = 1
 ex3_Kb = 1
@@ -64,7 +64,7 @@ ex4_Rt = 100
 
 ## Drug Parameters
 
-ex4_Ea = 1
+ex4_Ea = 0
 ex4_Ka = 1
 ex4_Eb = 1
 ex4_Kb = 1
