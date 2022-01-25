@@ -7,10 +7,10 @@ Rt = 100
 
 ## Drug Parameters
 
-Ea = 1
+Ea = 0
 Ka = 1
-Eb = 1.2
-Kb = 1.3
+Eb = 1
+Kb = 1
 
 ## Assay Parameters
 
@@ -26,50 +26,50 @@ ex2_Rt = 80
 
 ## Drug Parameters
 
-ex2_Ea = 1
-ex2_Ka = 1.2
-ex2_Eb = 2
-ex2_Kb = 2
+ex2_Ea = 0.33
+ex2_Ka = 1
+ex2_Eb = 1
+ex2_Kb = 1
 
 ## Assay Parameters
 
-ex2_threshold = 20
-ex2_capacity = 89
+ex2_threshold = 0
+ex2_capacity = 100
 
 ## Ex3
 
 ## Tissue Parameters
 
 ex3_F = 1
-ex3_Rt = 78
+ex3_Rt = 100
 
 ## Drug Parameters
 
-ex3_Ea = 1.5
+ex3_Ea = 0.66
 ex3_Ka = 1
-ex3_Eb = 2.6
-ex3_Kb = 2
+ex3_Eb = 1
+ex3_Kb = 1
 
 ## Assay Parameters
 
-ex3_threshold = 50
-ex3_capacity = 78
+ex3_threshold = 0
+ex3_capacity = 100
 
 ## Ex4
 
 ## Tissue Parameters
 
-ex4_F = 1.3
-ex4_Rt = 3
+ex4_F = 1
+ex4_Rt = 100
 
 ## Drug Parameters
 
-ex4_Ea = 1.6
-ex4_Ka = .2
-ex4_Eb = .1
-ex4_Kb = 0.125
+ex4_Ea = 1
+ex4_Ka = 1
+ex4_Eb = 1
+ex4_Kb = 1
 
 ## Assay Parameters
 
-ex4_threshold = 50
-ex4_capacity = 99
+ex4_threshold = 0
+ex4_capacity = 100
