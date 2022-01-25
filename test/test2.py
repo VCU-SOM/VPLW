@@ -7,9 +7,9 @@ Rt = 100
 
 ## Drug Parameters
 
-Ea = 0
+Ea = 1
 Ka = 1
-Eb = 1
+Eb = 0
 Kb = 1
 
 ## Assay Parameters
@@ -26,9 +26,9 @@ ex2_Rt = 100
 
 ## Drug Parameters
 
-ex2_Ea = 0
+ex2_Ea = 1
 ex2_Ka = 1
-ex2_Eb = 1
+ex2_Eb = 0
 ex2_Kb = 1
 
 ## Assay Parameters
@@ -45,9 +45,9 @@ ex3_Rt = 100
 
 ## Drug Parameters
 
-ex3_Ea = 0
+ex3_Ea = 1
 ex3_Ka = 1
-ex3_Eb = 1
+ex3_Eb = 0
 ex3_Kb = 1
 
 ## Assay Parameters
