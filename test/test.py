@@ -1,7 +1,7 @@
 ## Parameters
 
 F = 1
-Rt = 100
+Rt = 99
 E = 1
 Kd = 1
 threshold = 0
