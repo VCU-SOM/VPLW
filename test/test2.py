@@ -22,7 +22,7 @@ capacity = 100
 ## Tissue Parameters
 
 ex2_F = 1
-ex2_Rt = 80
+ex2_Rt = 100
 
 ## Drug Parameters
 
