@@ -505,7 +505,7 @@ def doseb():
         list.append(dose_B)
     for A in ex2_dose_A:
         list2.append(ex2_dose_B)
-    for A in ex4_dose_A:
+    for A in ex3_dose_A:
         list3.append(ex3_dose_B)
     for A in ex4_dose_A:
         list4.append(ex4_dose_B)
