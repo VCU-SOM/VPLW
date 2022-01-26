@@ -536,24 +536,24 @@ df = df.fillna(value=np.nan)
 dfrounded = df.round({"Dose A":4,"log(Dose A)":2,"FRO A":2, "Dose B":4,"log(Dose B)":2, "FRO B":2,"RA":2, "Effect(C-T)":2, "Effect(Assay)":2})
 
 #removing columns for students
-df_remove = dfrounded.filter(['Dose A','log(Dose A)','Effect(Assay)'])
+df_remove = dfrounded.filter(['Dose A','log(Dose A)','Dose B','log(Dose B)','Effect(Assay)'])
 
 ##
-df2 = pd.DataFrame(zippedList2, columns = ['Dose A','log(Dose A)','FRO A','DoseB','log(Dose B)','FRO B','RA','Effect(C-T)','Effect(Assay)'])
+df2 = pd.DataFrame(zippedList2, columns = ['Dose A','log(Dose A)','FRO A','Dose B','log(Dose B)','FRO B','RA','Effect(C-T)','Effect(Assay)'])
 df2 = df2.fillna(value=np.nan)
 
 df2rounded = df2.round({"Dose A":4,"log(Dose A)":2,"FRO A":2, "Dose B":4,"log(Dose B)":2, "FRO B":2,"RA":2, "Effect(C-T)":2, "Effect(Assay)":2})
 
-df2_remove = df2rounded.filter(['Dose A','log(Dose A)','Effect(Assay)'])
+df2_remove = df2rounded.filter(['Dose A','log(Dose A)','Dose B','log(Dose B)','Effect(Assay)'])
 
 ##
-df3 = pd.DataFrame(zippedList3, columns = ['Dose A','log(Dose A)','FRO A','DoseB','log(Dose B)','FRO B','RA','Effect(C-T)','Effect(Assay)'])
+df3 = pd.DataFrame(zippedList3, columns = ['Dose A','log(Dose A)','FRO A','Dose B','log(Dose B)','FRO B','RA','Effect(C-T)','Effect(Assay)'])
 
 df3 = df3.fillna(value=np.nan)
 
 df3rounded = df3.round({"Dose A":4,"log(Dose A)":2,"FRO A":2, "Dose B":4,"log(Dose B)":2, "FRO B":2,"RA":2, "Effect(C-T)":2, "Effect(Assay)":2})
 
-df3_remove = df3rounded.filter(['Dose A','log(Dose A)','Effect(Assay)'])
+df3_remove = df3rounded.filter(['Dose A','log(Dose A)','Dose B','log(Dose B)','Effect(Assay)'])
 
 ##
 df4 = pd.DataFrame(zippedList4, columns = ['Dose A','log(Dose A)','FRO A','DoseB','log(Dose B)','FRO B','RA','Effect(C-T)','Effect(Assay)'])
@@ -561,7 +561,7 @@ df4 = df4.fillna(value=np.nan)
 
 df4rounded = df4.round({"Dose A":4,"log(Dose A)":2,"FRO A":2, "Dose B":4,"log(Dose B)":2, "FRO B":2, "RA":2, "Effect(C-T)":2, "Effect(Assay)":2})
 
-df4_remove = df4rounded.filter(['Dose A','log(Dose A)','Effect(Assay)'])
+df4_remove = df4rounded.filter(['Dose A','log(Dose A)','Dose B','log(Dose B)','Effect(Assay)'])
 
 #dfrounded = df.round({"Dose":4,"DrugB":1})
 
