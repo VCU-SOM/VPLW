@@ -15,7 +15,7 @@ Kb = 1
 ## Assay Parameters
 
 threshold = 0
-capacity = 100
+capacity = 80
 
 ## Ex2 
 
@@ -34,7 +34,7 @@ ex2_Kb = 1
 ## Assay Parameters
 
 ex2_threshold = 0
-ex2_capacity = 100
+ex2_capacity = 80
 
 ## Ex3
 
@@ -53,7 +53,7 @@ ex3_Kb = 1
 ## Assay Parameters
 
 ex3_threshold = 0
-ex3_capacity = 100
+ex3_capacity = 80
 
 ## Ex4
 
@@ -72,4 +72,4 @@ ex4_Kb = 1
 ## Assay Parameters
 
 ex4_threshold = 0
-ex4_capacity = 100
+ex4_capacity = 80
