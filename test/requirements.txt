@@ -1,4 +1,4 @@
-pandas==1.0.4
+pandas==1.0.5
 matplotlib==3.2.1
 numpy==1.21
 jupyter-cjk-xelatex==0.2
