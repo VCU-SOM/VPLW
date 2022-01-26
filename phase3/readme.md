@@ -1,4 +1,4 @@
-![VCU](media/VCU_logo.png "VCU")
+![VCU](../media/VCU_logo.png "VCU")
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/VCU-SOM/VPLW/HEAD?labpath=%2Fphase3%2FVCU-VPLW-Phase3.ipynb)
 
 ## VCU Virtual Pharmacology Lab Worksheet. I. Single-Drug Dose-Effect Curves
