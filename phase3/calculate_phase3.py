@@ -1,5 +1,7 @@
 #Importing python libraries and defining functions
 
+import sys
+sys.path.insert(1, 'media')
 import math
 import numpy as np
 import pandas as pd
