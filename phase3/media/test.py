@@ -29,7 +29,7 @@ ex3_capacity = 60
 
 ex4_F = 1
 ex4_Rt = 100
-ex4_E = 4
+ex4_E = .4
 ex4_Kd = .1
 ex4_threshold = 20
 ex4_capacity = 60
