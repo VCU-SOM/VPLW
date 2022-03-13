@@ -5,7 +5,7 @@ Rt = 100
 E = .9
 Kd = 10
 threshold = 20
-capacity = 60
+capacity = 50
 
 ## Parameters
 
@@ -14,16 +14,16 @@ ex2_Rt = 100
 ex2_E = .9
 ex2_Kd = 10
 ex2_threshold = 20
-ex2_capacity = 60
+ex2_capacity = 50
 
 ## Parameters
 
-ex3_F = 0.65
+ex3_F = 0.55
 ex3_Rt = 100
 ex3_E = .9
 ex3_Kd = 10
 ex3_threshold = 20
-ex3_capacity = 60
+ex3_capacity = 50
 
 ## Parameters
 
@@ -32,4 +32,4 @@ ex4_Rt = 70
 ex4_E = .9
 ex4_Kd = 10
 ex4_threshold = 20
-ex4_capacity = 60
+ex4_capacity = 50
