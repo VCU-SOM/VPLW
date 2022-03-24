@@ -10,7 +10,7 @@ Rt = 100
 Ea = 0
 Ka = 0.1
 Eb = 1
-Kb = 10
+Kb = 2
 
 ## Assay Parameters
 
@@ -29,7 +29,7 @@ ex2_Rt = 100
 ex2_Ea = 0
 ex2_Ka = .1
 ex2_Eb = 1
-ex2_Kb = 10
+ex2_Kb = 2
 
 ## Assay Parameters
 
@@ -48,7 +48,7 @@ ex3_Rt = 100
 ex3_Ea = 0
 ex3_Ka = .1
 ex3_Eb = 1
-ex3_Kb = 10
+ex3_Kb = 2
 
 ## Assay Parameters
 
@@ -67,7 +67,7 @@ ex4_Rt = 100
 ex4_Ea = 0
 ex4_Ka = .1
 ex4_Eb = 1
-ex4_Kb = 10
+ex4_Kb = 2
 
 ## Assay Parameters
 
