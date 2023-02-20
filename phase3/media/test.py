@@ -12,7 +12,7 @@ capacity = 50
 ex2_F = 1
 ex2_Rt = 100
 ex2_E = .35
-ex2_Kd = 17
+ex2_Kd = 3
 ex2_threshold = 20
 ex2_capacity = 50
 
@@ -20,8 +20,8 @@ ex2_capacity = 50
 
 ex3_F = 1
 ex3_Rt = 100
-ex3_E = .9
-ex3_Kd = 17
+ex3_E = 0.7
+ex3_Kd = 0.1
 ex3_threshold = 20
 ex3_capacity = 50
 
@@ -29,7 +29,7 @@ ex3_capacity = 50
 
 ex4_F = 1
 ex4_Rt = 100
-ex4_E = .9
-ex4_Kd = 17
+ex4_E = 0.1
+ex4_Kd = 32
 ex4_threshold = 20
 ex4_capacity = 50
