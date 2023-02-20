@@ -11,7 +11,7 @@ capacity = 50
 
 ex2_F = 1
 ex2_Rt = 100
-ex2_E = .9
+ex2_E = .35
 ex2_Kd = 17
 ex2_threshold = 20
 ex2_capacity = 50
