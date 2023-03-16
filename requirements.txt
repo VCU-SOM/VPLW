@@ -1,6 +1,8 @@
 #pandas==1.0.5
-pandas==1.5.2
-matplotlib==3.2.1
+pandas
+matplotlib
+#matplotlib==3.2.1
 #numpy==1.21
 numpy
-jupyter-cjk-xelatex==0.2
+jupyter-cjk-xelatex
+#jupyter-cjk-xelatex==0.2
