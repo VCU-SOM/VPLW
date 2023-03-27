@@ -2,8 +2,8 @@
 
 F = 1
 Rt = 100
-E = .9
-Kd = 3
+E = 0.8
+Kd = 0.2
 threshold = 20
 capacity = 60
 
