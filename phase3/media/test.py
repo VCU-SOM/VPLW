@@ -9,10 +9,10 @@ capacity = 60
 
 ## Parameters
 
-ex2_F = .9
+ex2_F = 1
 ex2_Rt = 0
-ex2_E = 0.9
-ex2_Kd = 3
+ex2_E = 0
+ex2_Kd = 1
 ex2_threshold = 20
 ex2_capacity = 60
 
