@@ -12,7 +12,7 @@ capacity = 80
 ex2_F = 1
 ex2_Rt = 100
 ex2_E = .5
-ex2_Kd = 2
+ex2_Kd = .5
 ex2_threshold = 20
 ex2_capacity = 80
 
