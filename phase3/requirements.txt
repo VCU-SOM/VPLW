@@ -1,3 +1,4 @@
+Pyarrow
 pandas==1.5.2
 matplotlib==3.2.1
 numpy
