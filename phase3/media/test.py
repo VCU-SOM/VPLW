@@ -2,7 +2,7 @@
 
 F = 1
 Rt = 100
-E = 0.9
+E = 0.7
 Kd = 3
 threshold = 40
 capacity = 90
@@ -20,7 +20,7 @@ ex2_capacity = 90
 
 ex3_F = 1
 ex3_Rt = 100
-ex3_E = 0.9
+ex3_E = 0.7
 ex3_Kd = 1
 ex3_threshold = 40
 ex3_capacity = 90
@@ -29,7 +29,7 @@ ex3_capacity = 90
 
 ex4_F = 1
 ex4_Rt = 100
-ex4_E = 0.9
+ex4_E = 0.7
 ex4_Kd = 0.32
 ex4_threshold = 40
 ex4_capacity = 90
