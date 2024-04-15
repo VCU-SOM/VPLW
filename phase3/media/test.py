@@ -21,7 +21,7 @@ ex2_capacity = 90
 ex3_F = 0.5
 ex3_Rt = 80
 ex3_E = 0.9
-ex3_Kd = 0.6
+ex3_Kd = 0.3
 ex3_threshold = 40
 ex3_capacity = 90
 
