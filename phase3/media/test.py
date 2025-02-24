@@ -3,7 +3,7 @@
 F = 1
 Rt = 100
 E = 1
-Kd = 10
+Kd = 1
 threshold = 10  
 capacity = 50
 
