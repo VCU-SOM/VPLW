@@ -2,10 +2,10 @@
 
 F = 1
 Rt = 100
-E = 0.35
+E = 0.3
 Kd = 10
-threshold = 5  
-capacity = 50
+threshold = 10  
+capacity = 40
 
 ## Parameters
 
