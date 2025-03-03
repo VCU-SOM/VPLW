@@ -4,7 +4,7 @@ F = 1
 Rt = 100
 E = 0.35
 Kd = 10
-threshold = 10  
+threshold = 5  
 capacity = 50
 
 ## Parameters
