@@ -5,7 +5,7 @@ Rt = 100
 E = 0.35
 Kd = 10
 threshold = 10  
-capacity = 60
+capacity = 50
 
 ## Parameters
 
