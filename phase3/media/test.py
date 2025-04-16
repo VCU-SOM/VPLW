@@ -22,7 +22,7 @@ ex3_F = 1
 ex3_Rt = 100
 ex3_E = 1
 ex3_Kd = 0.1
-ex3_threshold = 80
+ex3_threshold = 90
 ex3_capacity = 100
 
 ## Parameters
@@ -30,6 +30,6 @@ ex3_capacity = 100
 ex4_F = 1
 ex4_Rt = 100
 ex4_E = 1
-ex4_Kd = 1
-ex4_threshold = 80
+ex4_Kd = 0.32
+ex4_threshold = 90
 ex4_capacity = 100
