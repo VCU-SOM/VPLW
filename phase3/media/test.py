@@ -20,10 +20,10 @@ ex2_capacity = 50
 
 ex3_F = 1
 ex3_Rt = 100
-ex3_E = 1
-ex3_Kd = 0.1
-ex3_threshold = 92
-ex3_capacity = 100
+ex3_E = 0.3
+ex3_Kd = 4
+ex3_threshold = 10
+ex3_capacity = 30
 
 ## Parameters
 
