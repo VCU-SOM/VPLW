@@ -2,18 +2,18 @@
 
 F = 1
 Rt = 100
-E = 0.7
-Kd = 1
-threshold = 30  
+E = 0.8
+Kd = 0.2
+threshold = 20  
 capacity = 60
 
 ## Parameters
 
 ex2_F = 1
 ex2_Rt = 100
-ex2_E =1
-ex2_Kd = 1
-ex2_threshold = 30  
+ex2_E =0
+ex2_Kd = 0.3
+ex2_threshold = 20  
 ex2_capacity = 60
 
 ## Parameters
